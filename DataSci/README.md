@@ -13,10 +13,10 @@ As the full dataset is quite long, only a subset of the data, from approximately
 - Line chart
 This graph displays daily peak UV Index at 5 locations across New Zealand, by year, with the ability to filter location.
 
--Histogram
+- Histogram
 This graph displays the frequency of daily UVI values, coded by location. If the line chart is filtered to look at a particular time period within a year, histogram data will be updated to reflect this.
 
--UVI trend
+- UVI trend
 The overall UVI trend (using each daily datapoint across all years) for each location can be optionally calculated. This trend analysis uses simple Linear Regression, and reports on whether the overall trend is increasing or decreasing, given the dataset.
 
 # Installation
