@@ -2,3 +2,4 @@ dash
 pandas
 plotly
 wikipedia-api
+scikit-learn
