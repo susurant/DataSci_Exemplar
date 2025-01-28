@@ -11,8 +11,6 @@ import wikipediaapi
 from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_absolute_error
-import time  # Used to simulate a delay for demonstration
-
 
 def load_wikipedia_information():
     """Return description section of specified length, from wikipedia via API"""
@@ -21,7 +19,7 @@ def load_wikipedia_information():
     page_py = wiki_wiki.page('Ultraviolet index')
     section_history = page_py.section_by_title('Description')
     summary_text = ("%s - %s" %
-                    (section_history.title, section_history.text[16:442]))
+                    ('UV Index', section_history.text[16:442]))
     return summary_text
 
 
@@ -80,7 +78,6 @@ def predict_future_years():
 
 
 def predict_slope(df):
-    time.sleep(2)
     """Using Linear Regression, fit a model for each location, and calculate slope and coefficients"""
     # Dict to hold model for each location
     models = {}
@@ -218,4 +215,4 @@ def update_text(n_clicks):
 
 # Run app in debug mode
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    app.run_server(debug=True, host="0.0.0.0", port=8050)
